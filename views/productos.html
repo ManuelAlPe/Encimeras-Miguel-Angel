@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--Creamos la página dirigida a que los usuarios vean una galería de fotos de los productos
+empezando como las páginas anteriores todo es igual hasta el header-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fabricamos encimeras de todo tipo de piedras desde 1947. Elaboradas con marmol de primera calidad, el mejor resultado garantizado.">
+    <meta name="robots" content="NOFOLLOW"> 
+    <meta name="Author" content="Manuel">
+    <meta name="keywords" content="Encimeras,marmol,piedra,cocinas" >
+    <meta name="revisit-after" content="2 days">
+    <title>Encimeras Miguel Angel</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <!--Abrimos la cabecera que contiene lo mismo que las otras páginas a excepción del class que diferencia un enlace de otros-->
+    <header>
+        <img src="../images/logo.png" alt= "logo empresa" title= "logo" width="1024" height="1024">
+        <nav>
+            <span class="enlace">
+                <a href="../index.html">Inicio</a>
+            </span>
+            <span class="enlace">
+                <!--El class con estilo diferente para diferenciar la página en que nos ubicamos dentro de la web se pone en el enlace de la barra de navegación productos-->
+                <a class="pagina_actual" href="../views/productos.html" >Productos</a>
+            </span>
+            <span class="enlace">
+                <a href="../views/presupuesto.html">Presupuesto</a>
+            </span>
+            <span class="enlace">
+                <a href="../views/contacto.html">Contacto</a>
+            </span>
+        </nav>
+    </header>
+    <!--Abrimos la sección principal, en este caso <main> para darle diferentes estilos que a <section> y <aside> en los .css-->
+    <main>
+        <!--Colocamos un título con <h2> y un párrafo <p> indicando información-->
+        <h2>Nuestros productos</h2>
+        <p>Aquí tienes varias imágenes para hacerte una idea de nuestros productos y montajes.</p>
+        <!--Creamos un <div> con un class para introducir todas las fotos y controlar en los estilos de todas estas a la vez dentro colocandolas en forma de galeria 5 encima de otras 5 con los estilos-->
+        <div class="galeria">
+            <!--Añadimos las diez imagenes correspondientes a esa galería con las etiquetas <img> y la ruta que las encuentra src-->
+            <img src="../images/encimera1.png" alt="encimera1" title="encimera1" width="1600" height="1183">
+            <img src="../images/encimera2.jpg" alt="encimera2" title="encimera2" width="1920" height="1080">
+            <img src="../images/encimera3.jpg" alt="encimera3" title="encimera3" width="1000" height="684">
+            <img src="../images/encimera4.jpg" alt="encimera4" title="encimera4" width="1920" height="1280">
+            <img src="../images/encimera5.jpg" alt="encimera5" title="encimera5" width="2560" height="1916">
+            <img src="../images/encimera6.jpg" alt="encimera6" title="encimera6" width="896" height="551">
+            <img src="../images/encimera7.jpg" alt="encimera7" title="encimera7" width="700" height="436">
+            <img src="../images/encimera8.jpg" alt="encimera8" title="encimera8" width="500" height="500">
+            <img src="../images/encimera9.jpg" alt="encimera9" title="encimera9" width="2048" height="1536">
+            <img src="../images/encimera10.jpg" alt="encimera10" title="encimera10" width="1200" height="675">
+        </div>
+    </main>
+    <!--Abrimos pie de página que sera igual en todas las paginas dentro de la web-->
+    <footer>
+        <a href="https://www.facebook.com/?locale=es_ES">
+            <img src="../images/facebook.png" alt="facebook" title="facebook" width="180" height="180">
+        </a>
+        <a href="https://x.com/?lang=es">
+            <img src="../images/twitter.jpeg" alt="twitter" title="twitter" width="1000" height="625">
+        </a>
+        <a href="https://www.instagram.com/">
+            <img src="../images/Instagram.png" alt="instagram" title="instagram" width="5001" height="5001">
+        </a>
+        <p>
+            ¿Dónde nos encontramos?<br>
+            C. Mercurio, 14, 45200 Illescas, Toledo
+        </p>
+        <a href="#">Aviso legal</a>
+    </footer>
+<!--Cerramos el body y el html-->
+</body>
+</html>

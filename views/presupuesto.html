@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--Iniciamos el html de la página dedicada a los presupuestos de la empresa con todo igual hasta el body que en el index y la página de contacto-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fabricamos encimeras de todo tipo de piedras desde 1947. Elaboradas con marmol de primera calidad, el mejor resultado garantizado.">
+    <meta name="robots" content="NOFOLLOW"> 
+    <meta name="Author" content="Manuel">
+    <meta name="keywords" content="Encimeras,marmol,piedra,cocinas" >
+    <meta name="revisit-after" content="2 days">
+    <title>Encimeras Miguel Angel</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<!--Abrimos el body-->
+<body>
+    <!--Colocamos la cabecera idéntica a las anteriores de index y contactos-->
+    <header>
+        <img src="../images/logo.png" alt= "logo empresa" title= "logo" width="1024" height="1024">
+        <nav>
+            <span class="enlace">
+                <a href="../index.html">Inicio</a>
+            </span>
+            <span class="enlace">
+                <a href="../views/productos.html" >Productos</a>
+            </span>
+            <!--En esta ocasión el class="pagina_actual" que tiene un estilo diferente para identificar la página en la que nos encontramos se lo colocamos al enlace de presupuesto-->
+            <span class="enlace">
+                <a class="pagina_actual" href="../views/presupuesto.html">Presupuesto</a>
+            </span>
+            <span class="enlace">
+                <a href="../views/contacto.html">Contacto</a>
+            </span>
+        </nav>
+    </header>
+    <!--Abrimos la sección principal,<aside> en este caso para diferenciarla del <section> de las otras páginas por que le vamos a aplicar estilos diferentes en el mismo .css-->
+    <aside>
+        <!--Ponemos un h2 con el título-->
+        <h2>Pide tu presupuesto sin compromiso</h2>
+        <!--Creamos un formulario con la etiqueta <form> y abrimos un <div> para cada uno de los cuadrados donde se introducen datos por parte del usuario-->
+        <form action="/procesar_datos" method="post">
+            <div>
+                <!--Ponemos la etiqueta <label for seguido del nombre del identificador que le vamos a poner al input para enlazar el texto con el area de texto correspondiente-->
+                <label for="nombre">Nombre:</label>
+                <!--Creamos un cuadro de texto con la etiqueta <input type="text" y le colocamos el id igual que el for de label y ponemos el atributo required para que el campo sea obligatorio para enviar el formulario-->
+                <input type="text" id="nombre" name="nombre" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" minlength="3">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <!--Creamos otro campo de texto con <input type pero esta vez email para que verifique que es un correo electrónico y atributo required igual que el campo anterior-->
+                <input type="email" id="email" name="email" required pattern="[^@ \]+\.">
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <!--De nuevo otro campo de texto con atributo tel para el cuadro donde se debe poner el teléfono y atributo required-->
+                <input type="tel" id="telefono" name="telefono" required pattern="\d{9}" minlength="9" maxlength="9">
+            </div>
+            <div>
+                <label for="mensaje">Solicite más información:</label>
+                <!--Aquí colocamos un textarea dandole tamaño con filas y columnas para poder escribir más texto en el que pueda solicitar información sobre el presupuesto a la empresa-->
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required minlength="10"></textarea>
+            </div>
+            <div class="horizontal">
+                <!--Creamos un cuadro de marcado para aceptar la politica de privacidad obligatorio también de marcar para enviar el formulario y 
+                un enlace en el texto de política de privacidad que te llevaría hasta esta en caso de haberla-->
+                <input type="checkbox" id="politica_privacidad" name="politica_privacidad" required>
+                <label for="politica_privacidad">Acepto la <a href="/politica_privacidad.html" target="_blank">política de privacidad</a></label>
+            </div>
+            <div class="horizontal">
+                <!--Por último colocamos dos botones que permiten enviar el formulario o borrarlo-->
+                <button type="submit">Enviar Formulario</button>
+                <button type="reset">Borrar Formulario</button>
+            </div>
+        </form>
+    </aside>
+    <!--Ponemos el pie de página que sera igual en todas las páginas-->
+    <footer>
+        <a href="https://www.facebook.com/?locale=es_ES">
+            <img src="../images/facebook.png" alt="facebook" title="facebook" width="180" height="180">
+        </a>
+        <a href="https://x.com/?lang=es">
+            <img src="../images/twitter.jpeg" alt="twitter" title="twitter" width="1000" height="625">
+        </a>
+        <a href="https://www.instagram.com/">
+            <img src="../images/Instagram.png" alt="instagram" title="instagram" width="5001" height="5001">
+        </a>
+        <p>
+            ¿Dónde nos encontramos?<br>
+            C. Mercurio, 14, 45200 Illescas, Toledo
+        </p>
+        <a href="#">Aviso legal</a>
+    </footer>
+<!--Cerramos el body y el html-->
+</body>
+</html>
